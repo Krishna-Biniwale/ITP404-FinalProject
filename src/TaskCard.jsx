@@ -52,9 +52,9 @@ const togglePinned = () => {
     fetch(`/tasks/${props.task.id}`, {
       method: 'PATCH',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ pinId: null }),
+      body: JSON.stringify({ pinId: 0 }),
     }).then(() => {
-      setPinId(null);
+      setPinId(0);
       setPinDate(null);
     });
   }
